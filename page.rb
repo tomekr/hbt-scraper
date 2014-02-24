@@ -2,11 +2,6 @@ require 'nokogiri'
 require 'open-uri'
 
 class Page
-  def initialize
-
-    
-  end
-
   RECIPE_HEADER = [
                     {name: 'Recipe Type', regex: /<b>Recipe Type:<\/b>(.+?)<br>/},
                     {name: 'Yeast', regex: /<b>Yeast:<\/b>(.+?)<br>/},
@@ -40,8 +35,7 @@ class Page
     puts "fetching post for #{url}"
     doc = Nokogiri::HTML(open(url))
 
-    # Get first post message in thread containing the recipe
-    recipe_text = doc.xpath("//div[contains(@id, 'post_message_')]")[0]
+    # Return first post message in thread containing the recipe
+    doc.xpath("//div[contains(@id, 'post_message_')]")[0].to_s
   end
-
 end

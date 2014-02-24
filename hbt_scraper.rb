@@ -1,12 +1,9 @@
 require 'nokogiri'
 require 'open-uri'
+load 'page.rb'
 
 class HbtScraper
   HBT_STYLE_LIST_URL = "http://www.homebrewtalk.com/f82/"
-
-  def initialize
-
-  end
 
   def parse_style_list
     doc = Nokogiri::HTML(open(HBT_STYLE_LIST_URL))
@@ -26,7 +23,8 @@ class HbtScraper
       style
     end
 
-    pp styles
+    # Returns a hash of styles and their corresponding urls
+    return styles
   end
 
   # Returns an array of recipes, grouped by style. This is the bread and butter
