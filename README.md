@@ -71,11 +71,11 @@ The above was scraped from [Da Yooper's House Pale Ale](http://www.homebrewtalk.
 ## TODO/Bugs
 
 1. **[BUG]** The following styles have different thread layouts than the other styles (i.e. they're missing the OG column):
-- [Porter](http://www.homebrewtalk.com/f126/)
-- [Mead](http://www.homebrewtalk.com/f80/) (should probably be ignored)
-- [Wine](http://www.homebrewtalk.com/f79/) (should probably be ignored)
-- [Soda](http://www.homebrewtalk.com/f171/) (should probably be ignored)
-- [Gluten Free](http://www.homebrewtalk.com/f240/) (should probably be ignored)
+  - [Porter](http://www.homebrewtalk.com/f126/)
+  - [Mead](http://www.homebrewtalk.com/f80/) (should probably be ignored)
+  - [Wine](http://www.homebrewtalk.com/f79/) (should probably be ignored)
+  - [Soda](http://www.homebrewtalk.com/f171/) (should probably be ignored)
+  - [Gluten Free](http://www.homebrewtalk.com/f240/) (should probably be ignored)
 2. **[BUG]** The script doesn't handle beer styles with a small amount of recipes. This is because when I check to see how many pages exists for a beer style, I check the link for the "Last Page". Some styles don't have enough recipes to have a "Last Page" (e.g. (Belgian Strong Ale)[http://www.homebrewtalk.com/f73/] only has 3 pages)
 3. **[TODO]** Persist the data collected into a database (I'm comfortable with [Redis](http://redis.io/)). 
 4. **[TODO]** Figure out how to parse the text to collect information such as the hops and grains used. I'm thinking of just grepping for the names of Hops and Grains and collecting surrounding texts. For the most part it looks like ingredient lists are multiline.
