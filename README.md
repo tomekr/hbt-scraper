@@ -4,7 +4,18 @@ I used ruby 2.1.0 while writing this, but it should work with Ruby 1.9 as well. 
 
 `bundle install`
 
-make sure you have the bundler gem installed before running the above command. If you don't run, `gem install bundler`.
+Make sure you have the bundler gem installed before running the above command. If you don't run, `gem install bundler`.
+
+From here if you actually want to use it, you'll probably want to open pry or irb. Make sure to navigate to the directory first. From there you can do something like:
+
+```zsh
+➜  hbt-scrape git:(master) irb
+ :001 > load 'hbt_scraper.rb'
+ => true
+ :002 > hbt = HbtScraper.new
+ => #<HbtScraper:0x0000010195a9c8>
+ :003 > hbt.get_all_recipes_from_style
+```
 
 ## Data Layout
 

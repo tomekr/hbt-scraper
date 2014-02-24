@@ -100,10 +100,12 @@ class HbtScraper
         recipe[name] = row.at_xpath(xpath).to_s.strip
       end
 
+      puts "finished parsing recipe: #{ recipe[:recipe_name] }"
+
       recipe
     end
 
-    pp recipes
+    return recipes
   end
 
   def has_thread_rating?(row)
